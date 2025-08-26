@@ -5,8 +5,8 @@ dataset={'pregunta':'¿Es una idea, emoción, sentimiento',#1
          'no':{'pregunta':'¿Está en el planeta Tierra?',#2
                'si':{'pregunta': '¿Está creado por el hombre?',#3
                      'si': {'pregunta':'¿Es una herramienta?',#4
-                            'si':{},
-                            'no':{}},
+                            'si': 'Martillo',
+                            'no': 'Taza'},
                      'no': ''},
                'no':{'pregunta': ''}}}
 
@@ -15,11 +15,11 @@ def jugar():
     
     nodo = dataset
     while isinstance(nodo,dict):
-        respuesta=input(f"{nodo['pregunta']}: Sí(s) o No(n)").lower()
+        respuesta=input(f"{nodo['pregunta']}: Sí(s) o No(n): ").lower()
 
         if respuesta == 's':
             nodo = nodo['si']
-        elif respuesta == 'no':
+        elif respuesta == 'n':
             nodo = nodo['no']
         else:
             print("Por favor responde con solo \'s\' o \'n\'")
