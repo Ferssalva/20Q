@@ -1,0 +1,23 @@
+{
+    "pregunta": "¿Es algo abstracto (idea, emoción, concepto)?",
+    "si": {
+        "pregunta" : "¿Es una emoción o sentimiento?",
+        "si" : {
+            "pregunta" : "¿Se experimenta de manera física (ej. dolor, cansancio, ansiedad)?",
+            "si" : {},
+            "no" : {
+                "pregunta":"¿Es una emoción positiva? (ej. amor, felicidad, esperanza)",
+                "si" : {},
+                "no" : {}
+            }
+        },
+        "no" : {
+            "pregunta" : "¿Es un concepto científico/matemático (ej. número, energía, gravedad)?",
+            "si" : {},
+            "no" : {}
+        }
+    },
+    "no": {
+        "pregunta" : ""
+    }
+}
