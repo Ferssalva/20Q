@@ -1,19 +1,11 @@
-dataset={'pregunta':'¿Es una idea, emoción, sentimiento',#1
-         'si':{'pregunta':'¿?',#2
-               'si':'',
-               'no':''},
-         'no':{'pregunta':'¿Está en el planeta Tierra?',#2
-               'si':{'pregunta': '¿Está creado por el hombre?',#3
-                     'si': {'pregunta':'¿Es una herramienta?',#4
-                            'si': 'Martillo',
-                            'no': 'Taza'},
-                     'no': ''},
-               'no':{'pregunta': ''}}}
+import json
 
 def jugar():
     print("Bienvenido a 20Q. Piensa en algo y yo adivinaré\nResponde con si(s) o no(n):")
+    with open('dataset.json', 'r', encoding='utf-8') as data:
+        dataset = json.load(data)
     
-    nodo = dataset
+    nodo=dataset
     while isinstance(nodo,dict):
         respuesta=input(f"{nodo['pregunta']}: Sí(s) o No(n): ").lower()
 
