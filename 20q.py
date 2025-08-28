@@ -1,24 +1,23 @@
+
 import json
+# Abrir json
+with open("dataset.json", "r", encoding="utf-8") as archivo:
+    arbol=json.load(archivo)
 
-def jugar():
-    print("Bienvenido a 20Q. Piensa en algo y yo adivinaré\nResponde con si(s) o no(n):")
-    with open('dataset.json', 'r', encoding='utf-8') as data:
-        dataset = json.load(data)
-    
-    nodo=dataset
-    while isinstance(nodo,dict):
-        respuesta=input(f"{nodo['pregunta']}: Sí(s) o No(n): ").lower()
+#Funcion de jugar
+def jugar (nodo):
+     # Resultado
+    if "resultado" in nodo:
+        print(f"Resultado: {nodo['resultado']}")
+        return
+     # Pregunta
+    respuesta = input(f"{nodo['pregunta']} (s/n): ").lower()
+    if respuesta.startswith("s"):
+        jugar(nodo["si"])
+    else:
+        jugar(nodo["no"])
 
-        if respuesta == 's':
-            nodo = nodo['si']
-        elif respuesta == 'n':
-            nodo = nodo['no']
-        else:
-            print("Por favor responde con solo \'s\' o \'n\'")
-            continue
-    
-    respuesta = nodo
+jugar(arbol)
 
-    print(f"La respuesta es {respuesta}")
 
-jugar()
+

@@ -1,23 +1,68 @@
 {
-    "pregunta": "¿Es algo abstracto (idea, emoción, concepto)?",
+    "pregunta": "1.- ¿Es un objeto/entidad tangible?",
     "si": {
-        "pregunta" : "¿Es una emoción o sentimiento?",
-        "si" : {
-            "pregunta" : "¿Se experimenta de manera física (ej. dolor, cansancio, ansiedad)?",
-            "si" : {},
-            "no" : {
-                "pregunta":"¿Es una emoción positiva? (ej. amor, felicidad, esperanza)",
-                "si" : {},
-                "no" : {}
+        "pregunta": "2.- ¿Es o fue un ser vivo?",
+        "si": {
+            "pregunta": "3.- ¿Sigue vivo actualmente?",
+            "si": {
+                "pregunta": "4.- ¿Es un animal?",
+                "si": {
+                    "pregunta": "5.- ¿Es una persona?",
+                    "si": {
+                        "resultado": "PERSONA"
+                    },
+                    "no": {
+                        "resultado": "ANIMAL"
+                    }
+                },
+                "no": {
+                    "pregunta":"?",
+                    "si":{},
+                    "no":{}
+                }
+            },
+            "no": {
+                "pregunta": "3.- ¿Sigue vivo actualmente?",
+                "si": {
+                    "pregunta": "4.-¿Es una prenda de vestir?",
+                    "si": {
+                        "resultado": "PRENDA DE ORIGEN VEGETAL (Algodon, Lino)"
+                    },
+                    "no": {
+                        "resultado": "OBJETO DE ORIGEN VEGETAL (Madera, Papel)"
+                    }
+                },
+                "no": {
+                    "resultado": "PRODUCTO DE ORIGEN ANIMAL (Cuero, Lana)"
+                }
             }
         },
-        "no" : {
-            "pregunta" : "¿Es un concepto científico/matemático (ej. número, energía, gravedad)?",
-            "si" : {},
-            "no" : {}
+        "no": {
+            "pregunta": "¿Es un objeto creado por el hombre?",
+            "si": {
+                "pregunta": "¿Usa electricidad?",
+                "si": {
+                    "resultado": "APARATO ELECTRÓNICO 🔌"
+                },
+                "no": {
+                    "resultado": "OBJETO MANUFACTURADO NO ELÉCTRICO (Herramienta, Mueble)"
+                }
+            },
+            "no": {
+                "resultado": "OBJETO NATURAL INERTE (Roca, Río, Montaña)"
+            }
         }
     },
     "no": {
-        "pregunta" : ""
+        "pregunta": "¿Es una emocion o un sentimiento?",
+        "si": {
+            "resultado": "EMOCION O SENTIMIENTO"
+        },
+        "no": {
+            "resultado": "CONCEPTO ABSTRACTO (Idea, Evento, Ciencia)"
+        }
     }
 }
+
+
+
