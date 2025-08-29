@@ -3,67 +3,385 @@
   "si": {
     "pregunta": "2.- ¿Es o fue un ser vivo?",
     "si": {
-      "pregunta": "3.- ¿Sigue vivo actualmente?",
+      "pregunta": "3.- ¿Es un animal?",
       "si": {
-        "pregunta": "4.- ¿Es un animal?",
+        "pregunta": "4.- ¿Tiene huesos (vertebrado)?",
         "si": {
-          "pregunta": "5.- ¿Es un vertebrado?",
+          "pregunta": "5.- ¿Vive en el agua?",
           "si": {
-            "pregunta": "6.- ¿Vive en el agua?",
-            "si": {},
-            "no": {}
+            "pregunta": "6.- ¿Respira siempre con branquias y tiene aletas?",
+            "si": {
+              "pregunta": "7.- ¿Su esqueleto es blando (cartílago)?",
+              "si": {
+                "resultado": "PECES CARTILAGINOSOS (tiburones, rayas)"
+              },
+              "no": {
+                "pregunta": "8.- ¿Vive en ríos o lagos?",
+                "si": {
+                  "resultado": "PECES DE AGUA DULCE (carpa, trucha, tilapia)"
+                },
+                "no": {
+                  "pregunta": "9.- ¿Nada en mar abierto (alta mar)?",
+                  "si": {
+                    "resultado": "PECES DE MAR ABIERTO (atún, pez espada)"
+                  },
+                  "no": {
+                    "resultado": "PECES DE ARRECIFE O COSTA (pez payaso, pez loro)"
+                  }
+                }
+              }
+            },
+            "no": {
+              "resultado": "ANFIBIOS ACUÁTICOS (ajolotes, salamandras)"
+            }
           },
           "no": {
             "pregunta": "6.- ¿Puede volar?",
-            "si": {},
-            "no": {}
+            "si": {
+              "pregunta": "7.- ¿Tiene plumas?",
+              "si": {
+                "pregunta": "8.- ¿No vuela aunque tiene alas?",
+                "si": {
+                  "pregunta": "9.- ¿Vive en el mar y nada erguido?",
+                  "si": {
+                    "resultado": "PINGÜINOS"
+                  },
+                  "no": {
+                    "resultado": "AVES CORREDORAS (avestruz, emú, ñandú)"
+                  }
+                },
+                "no": {
+                  "pregunta": "9.- ¿Caza con garras y pico curvado?",
+                  "si": {
+                    "resultado": "AVES RAPACES (águilas, halcones, buitres)"
+                  },
+                  "no": {
+                    "pregunta": "10.- ¿Nada o vive cerca del agua?",
+                    "si": {
+                      "resultado": "AVES ACUÁTICAS (patos, gansos, cisnes)"
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Es muy pequeño y se alimenta de néctar?",
+                      "si": {
+                        "resultado": "COLIBRÍES"
+                      },
+                      "no": {
+                        "resultado": "AVES CANTORAS (gorriones, mirlos, jilgueros)"
+                      }
+                    }
+                  }
+                }
+              },
+              "no": {
+                "resultado": "MURCIÉLAGOS (mamíferos voladores)"
+              }
+            },
+            "no": {
+              "pregunta": "7.- ¿Tiene pelo?",
+              "si": {
+                "pregunta": "8.- ¿Come sobre todo carne?",
+                "si": {
+                  "pregunta": "9.- ¿Tiene garras retráctiles?",
+                  "si": {
+                    "resultado": "FELINOS (gatos, leones, tigres, pumas)"
+                  },
+                  "no": {
+                    "pregunta": "10.- ¿Tiene hocico largo como un perro?",
+                    "si": {
+                      "resultado": "CANINOS (lobos, perros, zorros)"
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Es grande, peludo y también come plantas?",
+                      "si": {
+                        "resultado": "OSOS (osos pardos, polares, pandas)"
+                      },
+                      "no": {
+                        "pregunta": "12.- ¿Tiene cuerpo alargado y es muy ágil?",
+                        "si": {
+                          "resultado": "MUSTÉLIDOS (nutrias, comadrejas, tejones)"
+                        },
+                        "no": {
+                          "resultado": "OTROS CARNÍVOROS (hienas, mangostas)"
+                        }
+                      }
+                    }
+                  }
+                },
+                "no": {
+                  "pregunta": "9.- ¿Tiene pezuñas?",
+                  "si": {
+                    "pregunta": "10.- ¿Tiene un número impar de dedos (1 o 3)?",
+                    "si": {
+                      "pregunta": "11.- ¿Solo tiene 1 dedo (casco único)?",
+                      "si": {
+                        "resultado": "CABALLOS Y CEBRAS"
+                      },
+                      "no": {
+                        "resultado": "TAPIRES Y RINOCERONTES"
+                      }
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Tiene varios estómagos y mastica el bolo (rumia)?",
+                      "si": {
+                        "pregunta": "12.- ¿Sus cuernos no se caen nunca?",
+                        "si": {
+                          "resultado": "VACAS, CABRAS, OVEJAS, ANTÍLOPES"
+                        },
+                        "no": {
+                          "resultado": "VENADOS Y ALCE (cuernos que se caen cada año)"
+                        }
+                      },
+                      "no": {
+                        "pregunta": "12.- ¿Tiene joroba?",
+                        "si": {
+                          "resultado": "CAMELLOS Y LLAMAS"
+                        },
+                        "no": {
+                          "pregunta": "13.- ¿Es muy grande y vive en ríos o lagos?",
+                          "si": {
+                            "resultado": "HIPOPÓTAMOS"
+                          },
+                          "no": {
+                            "resultado": "CERDOS Y JABALÍES"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "no": {
+                    "pregunta": "10.- ¿Sus dientes delanteros crecen toda la vida?",
+                    "si": {
+                      "pregunta": "11.- ¿Tiene un par extra de dientes delanteros?",
+                      "si": {
+                        "resultado": "CONEJOS Y LIEBRES"
+                      },
+                      "no": {
+                        "pregunta": "12.- ¿Vive en árboles o cerca del agua?",
+                        "si": {
+                          "resultado": "ROEDORES GRANDES (ardillas, castores, capibaras)"
+                        },
+                        "no": {
+                          "resultado": "ROEDORES PEQUEÑOS (ratas, ratones, puercoespines)"
+                        }
+                      }
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Tiene trompa?",
+                      "si": {
+                        "resultado": "ELEFANTES"
+                      },
+                      "no": {
+                        "pregunta": "12.- ¿Vive en árboles y come sobre todo hojas?",
+                        "si": {
+                          "pregunta": "13.- ¿Es de África o Asia?",
+                          "si": {
+                            "resultado": "MONOS AFRICANOS/ASIÁTICOS QUE COMEN HOJAS (colobos, langures)"
+                          },
+                          "no": {
+                            "resultado": "MONOS DE AMÉRICA QUE COMEN HOJAS (aulladores)"
+                          }
+                        },
+                        "no": {
+                          "pregunta": "13.- ¿Es un marsupial?",
+                          "si": {
+                            "resultado": "MARSUPIALES HERBÍVOROS (canguros, wombats)"
+                          },
+                          "no": {
+                            "pregunta": "14.- ¿Come de todo (frutas, insectos, plantas)?",
+                            "si": {
+                              "resultado": "PRIMATES OMNÍVOROS (chimpancés, capuchinos)"
+                            },
+                            "no": {
+                              "resultado": "OTROS MAMÍFEROS NO CARNÍVOROS (perezosos, marsupiales varios)"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "no": {
+                "pregunta": "8.- ¿Tiene escamas secas?",
+                "si": {
+                  "pregunta": "9.- ¿Tiene caparazón duro?",
+                  "si": {
+                    "resultado": "TORTUGAS"
+                  },
+                  "no": {
+                    "pregunta": "10.- ¿No tiene patas visibles?",
+                    "si": {
+                      "pregunta": "11.- ¿Es venenosa?",
+                      "si": {
+                        "resultado": "SERPIENTES VENENOSAS (cobras, víboras)"
+                      },
+                      "no": {
+                        "resultado": "SERPIENTES NO VENENOSAS (boas, pitones, culebras)"
+                      }
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Hocico ancho y cuerpo con placas?",
+                      "si": {
+                        "resultado": "COCODRILOS Y CAIMANES"
+                      },
+                      "no": {
+                        "resultado": "LAGARTOS (gecos, iguanas, varanos)"
+                      }
+                    }
+                  }
+                },
+                "no": {
+                  "pregunta": "9.- ¿Tiene la piel húmeda y vive entre agua y tierra?",
+                  "si": {
+                    "pregunta": "10.- ¿Es saltador con piel lisa?",
+                    "si": {
+                      "resultado": "RANAS"
+                    },
+                    "no": {
+                      "pregunta": "11.- ¿Tiene cola y cuerpo alargado?",
+                      "si": {
+                        "resultado": "SALAMANDRAS Y TRITONES"
+                      },
+                      "no": {
+                        "resultado": "CECILIAS (anfibios sin patas)"
+                      }
+                    }
+                  },
+                  "no": {
+                    "resultado": "OTROS VERTEBRADOS TERRESTRES"
+                  }
+                }
+              }
+            }
           }
         },
         "no": {
-          "pregunta": "¿Puede volar?",
-          "si": {},
-          "no": {}
+          "pregunta": "4b.- ¿Tiene caparazón externo o cuerpo segmentado?",
+          "si": {
+            "pregunta": "5b.- ¿Tiene 6 patas?",
+            "si": {
+              "pregunta": "6b.- ¿Pasa por metamorfosis completa?",
+              "si": {
+                "resultado": "INSECTOS HOLOMETÁBOLOS (mariposas, moscas, escarabajos, avispas)"
+              },
+              "no": {
+                "resultado": "INSECTOS HEMIMETÁBOLOS (saltamontes, chinches, libélulas)"
+              }
+            },
+            "no": {
+              "pregunta": "6b.- ¿Tiene 8 patas?",
+              "si": {
+                "pregunta": "7b.- ¿Tiene aguijón en la cola?",
+                "si": {
+                  "resultado": "ESCORPIONES"
+                },
+                "no": {
+                  "resultado": "ARAÑAS Y ÁCAROS"
+                }
+              },
+              "no": {
+                "pregunta": "7b.- ¿Tiene muchas patas (cuerpo muy largo)?",
+                "si": {
+                  "pregunta": "8b.- ¿Un par de patas por segmento y es depredador veloz?",
+                  "si": {
+                    "resultado": "CIEMPIÉS"
+                  },
+                  "no": {
+                    "resultado": "MILPIÉS"
+                  }
+                },
+                "no": {
+                  "resultado": "CRUSTÁCEOS (cangrejos, langostas, camarones)"
+                }
+              }
+            }
+          },
+          "no": {
+            "pregunta": "5c.- ¿Tiene concha dura?",
+            "si": {
+              "pregunta": "6c.- ¿Es en espiral?",
+              "si": {
+                "resultado": "CARACOLES Y BABOSAS"
+              },
+              "no": {
+                "pregunta": "7c.- ¿Tiene dos valvas?",
+                "si": {
+                  "resultado": "ALMEJAS Y MEJILLONES"
+                },
+                "no": {
+                  "resultado": "PULPOS Y CALAMARES"
+                }
+              }
+            },
+            "no": {
+              "pregunta": "6c.- ¿Es blando y segmentado?",
+              "si": {
+                "pregunta": "7c.- ¿Chupa sangre?",
+                "si": {
+                  "resultado": "SANGUIJUELAS"
+                },
+                "no": {
+                  "resultado": "LOMBRICES"
+                }
+              },
+              "no": {
+                "pregunta": "7c.- ¿Tiene cuerpo en forma de estrella o espinas?",
+                "si": {
+                  "resultado": "ESTRELLAS Y ERIZOS DE MAR"
+                },
+                "no": {
+                  "pregunta": "8c.- ¿Tiene tentáculos con veneno?",
+                  "si": {
+                    "resultado": "MEDUSAS, CORALES, ANÉMONAS"
+                  },
+                  "no": {
+                    "resultado": "ESPONJAS U OTROS INVERTEBRADOS"
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "no": {
-        "pregunta": "3.- ¿Sigue vivo actualmente?",
+        "pregunta": "3.- ¿Es una planta?",
         "si": {
-          "pregunta": "4.-¿Es una prenda de vestir?",
+          "pregunta": "4.- ¿Se usa para ropa?",
           "si": {
-            "resultado": "PRENDA DE ORIGEN VEGETAL (Algodon, Lino)"
+            "resultado": "PRENDA VEGETAL (algodón, lino)"
           },
           "no": {
-            "resultado": "OBJETO DE ORIGEN VEGETAL (Madera, Papel)"
+            "resultado": "OBJETO VEGETAL (madera, papel)"
           }
         },
         "no": {
-          "resultado": "PRODUCTO DE ORIGEN ANIMAL (Cuero, Lana)"
+          "resultado": "PRODUCTO ANIMAL (cuero, lana)"
         }
       }
     },
     "no": {
-      "pregunta": "¿Es un objeto creado por el hombre?",
+      "pregunta": "3.- ¿Es un objeto creado por humanos?",
       "si": {
-        "pregunta": "¿Usa electricidad?",
+        "pregunta": "4.- ¿Funciona con electricidad?",
         "si": {
-          "resultado": "APARATO ELECTRÓNICO 🔌"
+          "resultado": "APARATO ELECTRÓNICO"
         },
         "no": {
-          "resultado": "OBJETO MANUFACTURADO NO ELÉCTRICO (Herramienta, Mueble)"
+          "resultado": "HERRAMIENTA U OBJETO HECHO A MANO"
         }
       },
       "no": {
-        "resultado": "OBJETO NATURAL INERTE (Roca, Río, Montaña)"
+        "resultado": "OBJETO NATURAL (roca, río, montaña)"
       }
     }
   },
   "no": {
-    "pregunta": "¿Es una emocion o un sentimiento?",
+    "pregunta": "2.- ¿Es una emoción o sentimiento?",
     "si": {
-      "resultado": "EMOCION O SENTIMIENTO"
+      "resultado": "EMOCIÓN O SENTIMIENTO"
     },
     "no": {
-      "resultado": "CONCEPTO ABSTRACTO (Idea, Evento, Ciencia)"
+      "resultado": "CONCEPTO ABSTRACTO (idea, ciencia, evento)"
     }
   }
 }
